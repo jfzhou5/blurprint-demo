@@ -19,7 +19,7 @@ export async function run(provider: NetworkProvider, args: string[]) {
     await simpleCounter.send(
         provider.sender(),
         {
-            value: toNano('0.05'),
+            value: toNano('0.001'),
         },
         {
             $$type: 'Add',

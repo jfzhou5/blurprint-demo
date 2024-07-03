@@ -31,4 +31,8 @@ contract SampleTactContract with Deployable {
     get fun counter(): Int {
         return self.counter;
     }
+
+    get fun owner(): Address {
+        return self.owner;
+    }
 }

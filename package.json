@@ -4,8 +4,10 @@
     "scripts": {
         "start": "blueprint run",
         "build": "blueprint build",
+        "build:all": "blueprint build --all",
         "test": "jest --verbose",
-        "tact-build": "tact --config ./tact.config.json"
+        "tact-build": "tact --config ./tact.config.json",
+        "run-testnet": "blueprint run --testnet --mnemonic"
     },
     "devDependencies": {
         "@ton/blueprint": "^0.21.0",

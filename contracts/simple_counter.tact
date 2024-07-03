@@ -1,5 +1,4 @@
 import "@stdlib/deploy";
-
 message Add {
     queryId: Int as uint64;
     amount: Int as uint32;
@@ -8,15 +7,13 @@ message Add {
 contract SimpleCounter with Deployable {
     id: Int as uint32;
     counter: Int as uint32;
-
-    init(id: Int) {
+    init(id: Int){
         self.id = id;
         self.counter = 0;
     }
 
-    receive(msg: Add) {
+    receive(msg: Add){
         self.counter += msg.amount;
-
         // Notify the caller that the receiver was executed and forward remaining value back
         self.notify("Cashback".asComment());
     }
